@@ -168,6 +168,7 @@ a{
     transition: all 400ms ease;
 }
 .navbar{
+    position: relative;
     justify-content: space-between;
     padding: 20px;
 }
