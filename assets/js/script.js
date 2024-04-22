@@ -92,3 +92,5 @@ const filter = function () {
 
 // Agregar evento de clic a los botones de filtro
 addEventOnElem(filterBtns, "click", filter);
+
+

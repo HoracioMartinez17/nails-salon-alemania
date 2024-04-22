@@ -1,0 +1,46 @@
+.swiper {
+    width: 75%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide .card-banner img{
+    border-radius: 5px;
+  }
+
+
+  .swiper-pagination{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 1rem;
+    background-color:var(--indian-yellow);
+  }
+
+
+  @media screen and(max-width:320px) {
+    .swiper{
+        width: 90%;
+    }
+    .swiper-slide{
+        height: calc((100% - 30px) / 3) !important;
+    }
+  }
+  @media screen and(max-width:768px) {
+    .swiper{
+        width: 90%;
+    }
+    .swiper-slide{
+        height: calc((100% - 30px) / 2) !important;
+    }
+  }

@@ -20,6 +20,19 @@
   -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- 
     - custom css link
   -->
@@ -120,7 +133,7 @@
               </li>
 
               <li class="navbar-item">
-                <a href="#precios" class="navbar-link" data-nav-link>Planes y precios</a>
+                <a href="#precios" class="navbar-link" data-nav-link>Precios</a>
               </li>
 
               <li class="navbar-item">
@@ -168,10 +181,11 @@
         >
           <div class="container">
             <h1 class="h1 hero-title">Nails & Hair Cutting</h1>
-
             <p class="hero-text">
-              Sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua suspendisse ultrices gravida
+              Embellece tus manos y pies con nuestros servicios exclusivos de manicura,
+              pedicura y diseños de uñas. ¡Déjanos cuidar de ti mientras te relajas y
+              disfrutas de un momento de belleza y estilo! Reserva ahora y descubre la
+              experiencia única que tenemos para ti.
             </p>
 
             <a href="#services" class="btn has-before">
@@ -188,137 +202,171 @@
 
         <section class="section service" id="services" aria-label="servicios">
           <div class="container">
-            <h2 class="h2 section-title text-center">Servicios que proporcionamos</h2>
+            <h2 class="h2 section-title text-center">Nuestros Servicios</h2>
 
             <p class="section-text text-center">
-              Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore
-              dolore magna aliqua suspendisse
+              En nuestro estudio de uñas, ofrecemos una amplia gama de servicios diseñados
+              para realzar tu belleza y cuidar de tus manos y pies.
             </p>
 
             <ul class="grid-list">
               <li>
                 <div class="service-card">
-                  <div class="card-icon">
-                    <i class="flaticon-salon"></i>
-                  </div>
-
+                  <figure
+                    class="card-img card-banner img-holder"
+                    style="--width: 90; --height: 90"
+                  >
+                    <img
+                      class="img-cover"
+                      src="./assets/images/gallery-1.jpg"
+                      alt="Manicura"
+                      width="90"
+                      height="90"
+                    />
+                  </figure>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Hair Cutting Style</a>
+                    <a href="#" class="card-title">Manicura</a>
                   </h3>
-
                   <p class="card-text">
-                    Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Disfruta de una manicura profesional que dejará tus uñas impecables.
+                    Nuestros expertos cuidarán de tus manos con esmero y precisión.
                   </p>
-
-                  <a href="#" class="card-btn" aria-label="enlace para ver mas servicios">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                  <details>
+                    <summary></summary>
+                    <div class="article">
+                      <p>
+                        Nuestra manicura incluye limado, pulido, cuidado de cutículas y
+                        aplicación de esmalte. También ofrecemos opciones como uñas de gel
+                        o acrílicas para un look duradero y glamoroso.
+                      </p>
+                      <p>
+                        ¿Quieres un diseño especial? ¡Déjate llevar por nuestra
+                        creatividad! Desde diseños simples hasta nail art elaborado,
+                        estamos aquí para hacer realidad tus ideas.
+                      </p>
+                    </div>
+                  </details>
                 </div>
               </li>
-
               <li>
                 <div class="service-card">
-                  <div class="card-icon">
-                    <i class="flaticon-shampoo"></i>
-                  </div>
-
+                  <figure
+                    class="card-img card-banner img-holder"
+                    style="--width: 90; --height: 90"
+                  >
+                    <img
+                      class="img-cover"
+                      src="./assets/images/gallery-2.jpg"
+                      alt="Pedicura"
+                      width="90"
+                      height="90"
+                    />
+                  </figure>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Hair Washing</a>
+                    <a href="#" class="card-title">Pedicura</a>
                   </h3>
-
                   <p class="card-text">
-                    Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Relájate y disfruta de una pedicura rejuvenecedora. Nuestros
+                    tratamientos dejarán tus pies suaves, cuidados y listos para lucir tus
+                    sandalias favoritas.
                   </p>
-
-                  <a href="#" class="card-btn" aria-label="enlace para ver mas servicios">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                  <details>
+                    <summary></summary>
+                    <div class="article">
+                      <p>
+                        Nuestra pedicura incluye remoción de callosidades, exfoliación,
+                        cuidado de cutículas y aplicación de esmalte. También ofrecemos
+                        servicios adicionales como tratamiento de parafina para una
+                        hidratación profunda.
+                      </p>
+                      <p>
+                        ¿Quieres lucir uñas perfectas durante semanas? Prueba nuestras
+                        uñas postizas o el esmaltado semipermanente para una duración
+                        prolongada y un brillo impecable.
+                      </p>
+                    </div>
+                  </details>
                 </div>
               </li>
-
               <li>
                 <div class="service-card">
-                  <div class="card-icon">
-                    <i class="flaticon-hot-stone"></i>
-                  </div>
-
+                  <figure
+                    class="card-img card-banner img-holder"
+                    style="--width: 90; --height: 90"
+                  >
+                    <img
+                      class="img-cover"
+                      src="./assets/images/gallery-3.jpg"
+                      alt="Diseños de uñas"
+                      width="90"
+                      height="90"
+                    />
+                  </figure>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Body Treatments</a>
+                    <a href="#" class="card-title">Diseños de Uñas</a>
                   </h3>
-
                   <p class="card-text">
-                    Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Embellece tus uñas con nuestros diseños únicos y creativos. Desde
+                    estilos minimalistas hasta nail art extravagante, estamos aquí para
+                    hacer realidad tus ideas.
                   </p>
-
-                  <a href="#" class="card-btn" aria-label="enlace para ver mas servicios">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                  <details>
+                    <summary></summary>
+                    <div class="article">
+                      <p>
+                        Nuestros artistas de uñas están capacitados para crear diseños
+                        personalizados que reflejen tu estilo y personalidad. Además,
+                        utilizamos productos de alta calidad para garantizar resultados
+                        duraderos y hermosos.
+                      </p>
+                      <p>
+                        ¿Quieres lucir uñas llamativas para una ocasión especial? ¡Déjanos
+                        sorprenderte con nuestros diseños temáticos y adornos brillantes!
+                        Desde elegantes hasta atrevidos, tenemos opciones para todos los
+                        gustos.
+                      </p>
+                    </div>
+                  </details>
                 </div>
               </li>
-
               <li>
                 <div class="service-card">
-                  <div class="card-icon">
-                    <i class="flaticon-treatment"></i>
-                  </div>
-
+                  <figure
+                    class="card-img card-banner img-holder"
+                    style="--width: 90; --height: 90"
+                  >
+                    <img
+                      class="img-cover"
+                      src="./assets/images/gallery-4.jpg"
+                      alt="Uñas de Gel"
+                      width="90"
+                      height="90"
+                    />
+                  </figure>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Beauty & Spa</a>
+                    <a href="#" class="card-title">Uñas de Gel</a>
                   </h3>
-
                   <p class="card-text">
-                    Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Experimenta la belleza y durabilidad de las uñas de gel. Con nuestra
+                    técnica experta, tus uñas lucirán impecables y resistentes durante
+                    semanas.
                   </p>
-
-                  <a href="#" class="card-btn" aria-label="enlace para ver mas servicios">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <i class="flaticon-shaving-razor"></i>
-                  </div>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Stylist Shaving</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
-                  </p>
-
-                  <a href="#" class="card-btn" aria-label="enlace para ver mas servicios">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <div class="card-icon">
-                    <i class="flaticon-hair-dye"></i>
-                  </div>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Multi Hair Colors</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
-                  </p>
-
-                  <a href="#" class="card-btn" aria-label="enlace para ver mas servicios">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
+                  <details>
+                    <summary></summary>
+                    <div class="article">
+                      <p>
+                        Las uñas de gel son una excelente opción para quienes desean una
+                        apariencia natural con la fuerza y resistencia del gel. Además de
+                        ser duraderas, estas uñas también ofrecen un brillo incomparable.
+                      </p>
+                      <p>
+                        Nuestros profesionales están entrenados en la aplicación de uñas
+                        de gel con precisión y cuidado. Con una amplia gama de colores y
+                        acabados, puedes personalizar tu look según tu estilo y
+                        preferencias.
+                      </p>
+                    </div>
+                  </details>
                 </div>
               </li>
             </ul>
@@ -332,15 +380,15 @@
         <section
           class="section pricing has-bg-image has-before"
           id="precios"
-          aria-label="pricios"
-          style="background-image: url('./assets/images/pricing-bg.jpg')"
+          aria-label="precios"
         >
           <div class="container">
             <h2 class="h2 section-title text-center">Nuestro plan de precios</h2>
 
             <p class="section-text text-center">
-              Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore
-              dolore magna aliqua suspendisse
+              En nuestro estudio de uñas, ofrecemos una variedad de planes y precios
+              diseñados para satisfacer tus necesidades y presupuesto. Desde opciones
+              básicas hasta paquetes premium, ¡tenemos algo para todos!
             </p>
 
             <div class="pricing-tab-container">
@@ -586,16 +634,18 @@
               <div>
                 <h2 class="h2 section-title">Nuestra galería de fotos</h2>
 
-                <p class="section-text">
-                  Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt
-                  labore dolore magna aliqua suspendisse
+                <p class="section-text text-center">
+                  Sumérgete en un mundo de creatividad y belleza con nuestra exclusiva
+                  galería de fotos. Desde diseños elegantes hasta estilos llamativos,
+                  nuestras obras de arte en uñas te inspirarán a expresar tu estilo único
+                  y personalidad.
                 </p>
               </div>
             </div>
-
-            <ul class="grid-list">
-              <li>
-                <div class="gallery-card">
+            <!-- =============== SWIPER GALLERY CARDS =============== -->
+            <div class="swiper gallery-cards-1">
+              <div class="swiper-wrapper" data-swiper-autoplay="1000">
+                <div class="swiper-slide">
                   <figure
                     class="card-banner img-holder"
                     style="--width: 422; --height: 550"
@@ -610,10 +660,52 @@
                     />
                   </figure>
                 </div>
-              </li>
-
-              <li>
-                <div class="gallery-card">
+                <div class="swiper-slide">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./assets/images/gallery-2.jpg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Hair Cutting"
+                      class="img-cover"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./assets/images/gallery-3.jpg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Hair Cutting"
+                      class="img-cover"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./assets/images/gallery-4.jpg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Hair Cutting"
+                      class="img-cover"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide">
                   <figure
                     class="card-banner img-holder"
                     style="--width: 422; --height: 550"
@@ -628,10 +720,7 @@
                     />
                   </figure>
                 </div>
-              </li>
-
-              <li>
-                <div class="gallery-card">
+                <div class="swiper-slide">
                   <figure
                     class="card-banner img-holder"
                     style="--width: 422; --height: 550"
@@ -646,10 +735,22 @@
                     />
                   </figure>
                 </div>
-              </li>
-
-              <li>
-                <div class="gallery-card">
+                <div class="swiper-slide">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./assets/images/color-1.jpg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Hair Cutting"
+                      class="img-cover"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide">
                   <figure
                     class="card-banner img-holder"
                     style="--width: 422; --height: 550"
@@ -664,8 +765,9 @@
                     />
                   </figure>
                 </div>
-              </li>
-            </ul>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </section>
 
@@ -880,8 +982,10 @@
     <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js" defer></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/swiper.js" defer></script>
     <!-- 
     - ionicon link
   -->
