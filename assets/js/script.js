@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Agregar evento a un elemento.
@@ -17,7 +17,7 @@ const addEventOnElem = function (elem, type, callback) {
     // Si elem es un solo elemento, agregar el evento directamente
     elem.addEventListener(type, callback);
   }
-}
+};
 
 /**
  * Alternar el menú de navegación.
@@ -54,7 +54,7 @@ const headerActive = function () {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
   }
-}
+};
 
 // Agregar evento de desplazamiento a la ventana para activar el encabezado y el botón de retroceso
 addEventOnElem(window, "scroll", headerActive);
@@ -77,8 +77,10 @@ const filter = function () {
 
   // Iterar sobre los elementos a filtrar
   for (let i = 0; i < filterItems.length; i++) {
-    if (this.dataset.filterBtn === filterItems[i].dataset.filter ||
-      this.dataset.filterBtn === "all") {
+    if (
+      this.dataset.filterBtn === filterItems[i].dataset.filter ||
+      this.dataset.filterBtn === "all"
+    ) {
       // Si el botón de filtro coincide o es 'all', mostrar el elemento
       filterItems[i].style.display = "block";
       filterItems[i].classList.add("active");
@@ -88,9 +90,25 @@ const filter = function () {
       filterItems[i].classList.remove("active");
     }
   }
-}
+};
 
 // Agregar evento de clic a los botones de filtro
 addEventOnElem(filterBtns, "click", filter);
 
+const dialog = document.getElementById("miDialog");
+const btnAbrirModal = document.querySelector("[data-id='abrir-modal']");
+const btnCerrarModal = document.querySelector("[data-id='cerrar-modal']");
+let iframe = document.getElementById("iframe");
+let urlReservas = 'https://kko.kisscalservice.de/?dbstudio=ks_linetattoo';
 
+btnAbrirModal.addEventListener("click", () => {
+  dialog.showModal();
+  dialog.style.display = "grid";
+  iframe.src =  urlReservas;
+  iframe.style.display = "block";
+});
+
+btnCerrarModal.addEventListener("click", () => {
+  dialog.style.display = "none";
+  dialog.close();
+});
