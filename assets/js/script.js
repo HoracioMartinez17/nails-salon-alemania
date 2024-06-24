@@ -6,6 +6,55 @@
  * @param {string} type - Tipo de evento (por ejemplo, 'click', 'scroll', etc.).
  * @param {Function} callback - Función que se ejecutará cuando ocurra el evento.
  */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiperWrapper = document.getElementById('swiper-wrapper');
+  const totalImages = 26; // Total number of images
+  const width = 550;
+  const height = 550;
+
+  for (let i = 1; i <= totalImages; i++) {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+
+    const figure = document.createElement('figure');
+    figure.className = 'card-banner img-holder';
+    figure.style.setProperty('--width', `${width}`);
+    figure.style.setProperty('--height', `${height}`);
+
+    const imgCover = document.createElement('img');
+    imgCover.src = `assets/images/uñas/uñas-${i}.webp`; // Adjust the path as needed
+    imgCover.width = width;
+    imgCover.height = height;
+    imgCover.loading = 'lazy';
+    imgCover.alt = `uñas image ${i}`;
+    imgCover.className = 'img-cover-1';
+
+    const imgContain = document.createElement('img');
+    imgContain.src = `assets/images/uñas/uñas-${i}.webp`; // Adjust the path as needed
+    imgContain.width = width;
+    imgContain.height = height;
+    imgContain.loading = 'lazy';
+    imgContain.alt = `uñas image ${i}`;
+    imgContain.className = 'img-contain-1';
+
+    // Add click event to open modal image within the figure
+    imgCover.addEventListener('click', () => {
+      imgContain.style.display = 'block';
+    });
+
+    // Add click event to close modal image
+    imgContain.addEventListener('click', () => {
+      imgContain.style.display = 'none';
+    });
+
+    figure.appendChild(imgCover);
+    figure.appendChild(imgContain);
+    slide.appendChild(figure);
+    swiperWrapper.appendChild(slide);
+  }
+});
 const addEventOnElem = function (elem, type, callback) {
   // Si elem es una colección de elementos
   if (elem.length > 1) {
@@ -96,19 +145,24 @@ const filter = function () {
 addEventOnElem(filterBtns, "click", filter);
 
 const dialog = document.getElementById("miDialog");
-const btnAbrirModal = document.querySelector("[data-id='abrir-modal']");
+const btnAbrirModal = document.querySelectorAll("[data-id='abrir-modal']");
 const btnCerrarModal = document.querySelector("[data-id='cerrar-modal']");
 let iframe = document.getElementById("iframe");
-let urlReservas = 'https://kko.kisscalservice.de/?dbstudio=ks_linetattoo';
+let urlReservas = "https://kko.kisscalservice.de/?dbstudio=ks_linetattoo";
 
-btnAbrirModal.addEventListener("click", () => {
-  dialog.showModal();
-  dialog.style.display = "grid";
-  iframe.src =  urlReservas;
-  iframe.style.display = "block";
+// Agrega un event listener a cada botón de abrir modal
+btnAbrirModal.forEach(btn => {
+  btn.addEventListener("click", () => {
+    dialog.showModal();
+    dialog.style.display = "grid";
+    iframe.src = urlReservas;
+    iframe.style.display = "block";
+  });
 });
 
 btnCerrarModal.addEventListener("click", () => {
   dialog.style.display = "none";
+  iframe.src = "";
+  iframe.style.display = "none";
   dialog.close();
 });

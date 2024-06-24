@@ -10,12 +10,20 @@
     breakpoints: {
         // when window width is >= 320px
         320: {
-          slidesPerView: 2,
+          grid: {
+            rows: 1,
+            fill: "fill",
+        },
+          slidesPerView: 1,
           spaceBetween: 10,
         },
         // when window width is >= 480px
         480: {
-          slidesPerView: 2,
+          grid: {
+            rows: 1,
+            fill: "fill",
+        },
+          slidesPerView: 1,
           spaceBetween: 10,
         },
         // when window width is >= 640px

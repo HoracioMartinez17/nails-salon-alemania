@@ -309,6 +309,7 @@ dialog iframe {
   transform: skewY(-15deg) scaleY(2.5);
 }
 
+
 .text-center {
   text-align: center;
 }
@@ -331,6 +332,68 @@ dialog iframe {
   object-fit: cover;
 }
 
+/* Modal */
+.modal-1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content-1 {
+  margin-inline: auto;
+  margin-block-start: 10rem;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+}
+.img-contain-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensure it is above other content */
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.img-holder-1 {
+  position: relative; /* Make sure the parent is positioned */
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.img-cover-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer; /* Indicate it is clickable */
+}
+/* Close Button */
+.close-1 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-1:hover,
+.close-1:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -362,7 +425,7 @@ dialog iframe {
 
 .header-top-list .social-link {
   color: var(--sonic-silver);
-  font-size: 15px;
+  font-size: 2rem;
   transition: var(--transition-1);
 }
 
@@ -462,7 +525,8 @@ dialog iframe {
 }
 
 .navbar-link:is(:hover, :focus) {
-  color: var(--indian-yellow);
+  background-color: var(--black_30);
+  border-radius: 5px;
 }
 
 /*-----------------------------------*\
@@ -635,6 +699,11 @@ details[open] summary::after {
   display: none;
 }
 
+.pricing .pricing-tab-container .btn {
+  margin: 0 auto;
+  margin-block-start: 2rem;
+}
+
 .filter-btn.active {
   background-color: var(--indian-yellow);
   border-color: var(--indian-yellow);
@@ -669,10 +738,16 @@ details[open] summary::after {
 }
 
 .pricing-card .card-banner {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
 }
-
+.pricing-card .card-banner img{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
 .pricing-card .wrapper {
   order: 1;
 }
