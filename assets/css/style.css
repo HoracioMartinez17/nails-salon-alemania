@@ -528,6 +528,9 @@ dialog iframe {
   background-color: var(--black_30);
   border-radius: 5px;
 }
+header .btn-header{
+  display: none !important;
+}
 
 /*-----------------------------------*\
   #HERO
@@ -1324,7 +1327,12 @@ a.contact-link:is(:hover, :focus) {
   .header-top {
     max-width: 780px;
   }
-
+  header .navbar-item .btn-header-link{
+    display: none !important;
+  }
+  header .btn-header{
+    display: flex !important;
+  }
   /**
    * SERVICE
    */
