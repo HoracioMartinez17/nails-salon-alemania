@@ -19,6 +19,7 @@
   --rich-black-fogra-39: hsl(0, 0%, 5%);
   --indian-yellow_10: hsla(36, 61%, 58%, 0.1);
   --indian-yellow: rgb(89, 115, 96);
+  --indian-yellow-logo: rgba(25, 131, 53, 0.24);
   --harvest-gold: rgb(0, 51, 45);
   --eerie-black-1: hsl(0, 0%, 14%);
   --eerie-black-2: hsl(0, 0%, 12%);
@@ -318,6 +319,7 @@ dialog iframe {
   display: grid;
   place-content: center;
   gap: 30px;
+  grid-template-columns: 1fr; /* Una columna por defecto */
 }
 
 .img-holder {
@@ -445,8 +447,8 @@ dialog iframe {
 .header-bottom.active {
   position: fixed;
   top: 0;
-  background-color: var(--rich-black-fogra-39);
   transform: translateY(-100%);
+  backdrop-filter: blur(5px);
   animation: slideIn 0.5s ease forwards;
 }
 
@@ -475,17 +477,18 @@ dialog iframe {
 }
 
 .logo .span {
-  color: var(--white);
+  color: var(--rich-black-fogra-39);
   font-family: var(--ff-rubik);
   font-size: 1.3rem;
   font-weight: var(--fw-300);
   text-transform: capitalize;
   letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.329);
 }
 
 .nav-toggle-btn {
-  color: var(--white);
-  font-size: 40px;
+  color: var(--rich-black-fogra-39);
+  font-size: 50px;
 }
 
 .navbar {
@@ -494,7 +497,7 @@ dialog iframe {
   top: 100%;
   left: 15px;
   right: 15px;
-  background-color: var(--rich-black-fogra-39);
+  background-color: var(--white);
   max-height: 0;
   overflow: hidden;
   transition: 0.15s var(--cubic-out);
@@ -515,18 +518,23 @@ dialog iframe {
 }
 
 .navbar-link {
-  color: var(--white);
+  color: var(--harvest-gold);
   font-family: var(--ff-oswald);
   font-weight: var(--fw-600);
   text-transform: uppercase;
   line-height: 1.5;
   padding: 10px 30px;
   transition: var(--transition-1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.411);
 }
 
 .navbar-link:is(:hover, :focus) {
   background-color: var(--black_30);
   border-radius: 5px;
+}
+
+header .navbar-item .btn-header-link .navbar-link{
+  color: var(--white);
 }
 header .btn-header{
   display: none !important;
@@ -535,23 +543,73 @@ header .btn-header{
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-
-.hero {
+.header__container {
+  display: grid;
+  gap: 4rem 2rem;
+  overflow: hidden;
+  padding-inline: 3rem;
   --section-padding: 100px;
   padding-block-start: calc(var(--section-padding) + 40px);
-  background-position: left;
 }
 
-.hero::before {
-  inset: 0;
-  background-color: var(--rich-black-fogra-39_50);
-  mix-blend-mode: multiply;
+.header__content{
+    padding-inline-start: 1.5rem;
+}
+.header__content h1 {
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 3.75rem;
+  font-weight: 600;
+  color: var(--indian-yellow);
+  font-family: var(--ff-oswald);
+  text-align: center;
+}
+
+.header__content .section__description {
+  color: var(--indian-yellow);
+  font-family: var(--ff-oswald);
+  font-size: 1.7rem;
+  margin-block: 15px 40px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.445);
+}
+
+.header__btns {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__image {
+  position: relative;
+  isolation: isolate;
+}
+
+.header__image::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  clip-path: polygon(10rem 1, 100% 0, 100% 100%, 0 100%);
+  background-color: var(--indian-yellow-logo);
   z-index: -1;
 }
 
-.hero-text {
-  color: var(--white);
-  margin-block: 15px 40px;
+.header__image img {
+  width: 90vw;
+  max-width: 550px;
+  margin-inline: auto;
+  margin-left: 1.7rem;
+  margin-block-start: 3rem;
+}
+
+.discover__container .section__header {
+  margin-bottom: 2rem;
+  max-width: 550px;
+  margin-inline: auto;
 }
 
 /*-----------------------------------*\
@@ -561,7 +619,12 @@ header .btn-header{
 .service {
   text-align: center;
 }
-
+.service .grid-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
 summary {
   cursor: pointer;
 }
@@ -1076,6 +1139,10 @@ a.contact-link:is(:hover, :focus) {
   padding: 15px;
 }
 
+.footer-brand .logo .span {
+  color: var(--white);
+}
+
 .copyright-link {
   display: inline-block;
   color: var(--indian-yellow);
@@ -1201,15 +1268,12 @@ a.contact-link:is(:hover, :focus) {
   /**
    * HERO
    */
-
-  .hero {
-    padding-block-start: calc(var(--section-padding) + 80px);
+   .service .grid-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
-
-  .hero-text {
-    font-size: var(--fs-18);
-  }
-
   /**
    * PRICING
    */
@@ -1334,11 +1398,74 @@ a.contact-link:is(:hover, :focus) {
     display: flex !important;
   }
   /**
+   * Hero
+   */
+
+   .header{
+    margin-block:5rem;
+  }
+      .header__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+      .header__content h1 {
+    padding-top: 0rem;
+    margin-bottom: 1rem;
+    font-size: 3.75rem;
+    font-weight: 600;
+    text-align: center;
+  }
+      .header__image::before {
+        clip-path: polygon(10rem 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .header__image img {
+        margin-left: 7rem;
+      }
+    }
+  
+      .header__content :is(h1, .section__description) {
+        text-align: left;
+      }
+  
+      .header__btns {
+        justify-content: flex-start;
+      }
+  
+  
+      .commitment__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+  
+      .commitment__content :is(.section__header, .section__description) {
+        text-align: left;
+      }
+  
+      .commitment__content .section__header {
+        max-width: 500px;
+      }
+  
+      .build__content :is(.section__header, .section__description) {
+        text-align: left;
+      }
+  
+      .client__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+
+      .client__content :is(.section__header, .section__description) {
+        text-align: left;
+      }
+  /**
    * SERVICE
    */
 
   .service .grid-list {
-    grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   }
 
   /**
@@ -1380,7 +1507,6 @@ a.contact-link:is(:hover, :focus) {
   .footer-list:is(:nth-child(3), :nth-child(4)) {
     grid-column: auto;
   }
-}
 
 /**
  * responsive for large than 992px screen
@@ -1479,6 +1605,9 @@ a.contact-link:is(:hover, :focus) {
    */
 
   .service .grid-list {
+    display: grid;
+    place-content: center;
+    gap: 30px;
     grid-template-columns: repeat(2, 400px);
   }
 
