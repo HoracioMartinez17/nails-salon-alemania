@@ -748,6 +748,7 @@ details[open] summary::after {
   margin-block-end: 30px;
 }
 
+
 .filter-btn {
   color: var(--eerie-black-1);
   font-family: var(--ff-oswald);
@@ -884,102 +885,6 @@ details[open] summary::after {
   color: var(--white);
 }
 
-/*-----------------------------------*\
-  #APPOINTMENT
-\*-----------------------------------*/
-
-.appoin {
-  padding-block-start: 0;
-}
-
-.appoin-card .card-banner {
-  display: none;
-}
-
-.appoin-card .card-content {
-  background-color: var(--indian-yellow);
-  padding: 80px 15px;
-  text-align: center;
-  color: var(--white);
-}
-
-.appoin-card .section-title {
-  color: var(--white);
-}
-
-.appoin-card .section-text {
-  margin-block: 15px 55px;
-}
-
-.input-field {
-  background-color: var(--white);
-  color: var(--davys-gray);
-  min-height: 56px;
-  padding-inline: 25px;
-  border-radius: var(--radius-5);
-  margin-block-end: 20px;
-  outline: none;
-  outline-offset: 0;
-}
-
-.input-field:focus {
-  outline: 3px solid var(--black_30);
-}
-
-select.input-field {
-  appearance: none;
-}
-
-select.input-field,
-.input-field::placeholder,
-.input-field.date {
-  font-family: var(--ff-oswald);
-  color: var(--eerie-black-1);
-  font-weight: var(--fw-500);
-}
-
-.input-field > option {
-  color: var(--sonic-silver);
-  font-family: var(--ff-rubik);
-}
-
-.input-field.date {
-  text-transform: uppercase;
-}
-
-.input-field::-webkit-calendar-picker-indicator {
-  opacity: 0.85;
-}
-
-textarea.input-field {
-  padding-block: 15px;
-  min-height: 100px;
-  height: 120px;
-  max-height: 150px;
-  resize: vertical;
-}
-
-.form-btn {
-  color: var(--white);
-  font-family: var(--ff-oswald);
-  font-size: var(--fs-14);
-  font-weight: var(--fw-500);
-  text-transform: uppercase;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--white);
-  padding: 13px;
-  border-radius: var(--radius-5);
-  transition: var(--transition-1);
-}
-
-.form-btn:is(:hover, :focus) {
-  background-color: var(--white);
-  color: var(--eerie-black-1);
-}
 
 /*-----------------------------------*\
   #FOOTER
@@ -1239,7 +1144,7 @@ a.contact-link:is(:hover, :focus) {
   }
 
   .header-top-item ion-icon {
-    font-size: 18px;
+    font-size: 25px;
     color: var(--indian-yellow);
     --ionicon-stroke-width: 50px;
   }
@@ -1314,14 +1219,6 @@ a.contact-link:is(:hover, :focus) {
 
   .gallery .grid-list {
     grid-template-columns: 1fr 1fr;
-  }
-
-  /**
-   * APPOINTMENT
-   */
-
-  .appoin-card .card-content {
-    padding-inline: 50px;
   }
 
   /**
@@ -1480,7 +1377,7 @@ a.contact-link:is(:hover, :focus) {
    */
 
 .pricing-tab-container {
-  padding: 40px;
+  padding: 10px;
 }
 
 .pricing-card .wrapper {
@@ -1495,17 +1392,6 @@ a.contact-link:is(:hover, :focus) {
   inset: 30px;
 }
 
-/**
-   * APPOINTMENT
-   */
-
-.appoin-card .card-banner {
-  display: block;
-}
-
-.appoin-card {
-  display: flex;
-}
 
 /**
    * FOOTER
@@ -1650,15 +1536,6 @@ a.contact-link:is(:hover, :focus) {
   }
 
   /**
-   * APPOINTMENT
-   */
-
-  .appoin-card .input-wrapper {
-    display: flex;
-    gap: 20px;
-  }
-
-  /**
    * FOOTER
    */
 
@@ -1760,14 +1637,6 @@ a.contact-link:is(:hover, :focus) {
 
   .gallery .grid-list {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  /**
-   * APPOINTMENT
-   */
-
-  .appoin-card .card-content {
-    flex-grow: 1;
   }
 
   /**

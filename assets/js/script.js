@@ -113,7 +113,7 @@ const dialog = document.getElementById("miDialog");
 const btnAbrirModal = document.querySelectorAll("[data-id='abrir-modal']");
 const btnCerrarModal = document.querySelector("[data-id='cerrar-modal']");
 let iframe = document.getElementById("iframe");
-let urlReservas = "https://www.fresha.com/de/book-now/nail-line-heilbronn-po4l584b/all-offer?pId=1270275";
+let urlReservas = "https://www.fresha.com/de/a/nail-line-heilbronn-heilbronn-stresemannstrasse-110-yzne02bw/booking?menu=true";
 
 // Agrega un event listener a cada botón de abrir modal
 btnAbrirModal.forEach(btn => {
