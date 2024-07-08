@@ -197,7 +197,7 @@ dialog iframe {
 
 .btn--close {
   width: max-content;
-  margin-left:  auto;
+  margin-left: auto;
   margin-block: 0.3rem;
   margin-inline-end: 0.8rem;
 }
@@ -309,7 +309,6 @@ dialog iframe {
 .btn:is(:hover, :focus)::before {
   transform: skewY(-15deg) scaleY(2.5);
 }
-
 
 .text-center {
   text-align: center;
@@ -533,10 +532,10 @@ dialog iframe {
   border-radius: 5px;
 }
 
-header .navbar-item .btn-header-link .navbar-link{
+header .navbar-item .btn-header-link .navbar-link {
   color: var(--white);
 }
-header .btn-header{
+header .btn-header {
   display: none !important;
 }
 
@@ -547,13 +546,13 @@ header .btn-header{
   display: grid;
   gap: 4rem 2rem;
   overflow: hidden;
-  padding-inline: 3rem;
+  padding-inline: 0.6rem;
   --section-padding: 100px;
   padding-block-start: calc(var(--section-padding) + 40px);
 }
 
-.header__content{
-    padding-inline-start: 1.5rem;
+.header__content {
+  padding-inline: 1.5rem;
 }
 .header__content h1 {
   padding-top: 2rem;
@@ -620,10 +619,10 @@ header .btn-header{
   text-align: center;
 }
 .service .grid-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 summary {
   cursor: pointer;
@@ -804,13 +803,13 @@ details[open] summary::after {
 }
 
 .pricing-card .card-banner {
-  width: 130px;
-  height: 130px;
+  width: 230px;
+  height: 200px;
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 5px;
   overflow: hidden;
 }
-.pricing-card .card-banner img{
+.pricing-card .card-banner img {
   aspect-ratio: 1/1;
   object-fit: cover;
 }
@@ -1067,7 +1066,12 @@ textarea.input-field {
   margin-block-start: 8px;
   transition: var(--transition-1);
 }
-
+.footer-list-item .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .footer-link:is(:hover, :focus) {
   color: var(--white);
 }
@@ -1268,7 +1272,7 @@ a.contact-link:is(:hover, :focus) {
   /**
    * HERO
    */
-   .service .grid-list {
+  .service .grid-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1284,7 +1288,11 @@ a.contact-link:is(:hover, :focus) {
     line-height: 1;
     margin-block-end: 5px;
   }
-
+  .filter-btn .btn-icon img {
+    width: 85px;
+    height: 65px;
+    margin: 0 auto;
+  }
   .pricing-card {
     flex-wrap: nowrap;
     align-items: center;
@@ -1391,122 +1399,121 @@ a.contact-link:is(:hover, :focus) {
   .header-top {
     max-width: 780px;
   }
-  header .navbar-item .btn-header-link{
+  header .navbar-item .btn-header-link {
     display: none !important;
   }
-  header .btn-header{
+  header .btn-header {
     display: flex !important;
   }
   /**
    * Hero
    */
 
-   .header{
-    margin-block:5rem;
+  .header {
+    margin-block: 5rem;
   }
-      .header__container {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-      }
-      .header__content h1 {
+  .header__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .header__content h1 {
     padding-top: 0rem;
     margin-bottom: 1rem;
     font-size: 3.75rem;
     font-weight: 600;
     text-align: center;
   }
-      .header__image::before {
-        clip-path: polygon(10rem 0, 100% 0, 100% 100%, 0 100%);
-      }
-      .header__image img {
-        margin-left: 7rem;
-      }
-    }
-  
-      .header__content :is(h1, .section__description) {
-        text-align: left;
-      }
-  
-      .header__btns {
-        justify-content: flex-start;
-      }
-  
-  
-      .commitment__container {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-      }
-  
-      .commitment__content :is(.section__header, .section__description) {
-        text-align: left;
-      }
-  
-      .commitment__content .section__header {
-        max-width: 500px;
-      }
-  
-      .build__content :is(.section__header, .section__description) {
-        text-align: left;
-      }
-  
-      .client__container {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-      }
+  .header__image::before {
+    clip-path: polygon(10rem 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header__image img {
+    margin-left: 7rem;
+  }
+}
 
-      .client__content :is(.section__header, .section__description) {
-        text-align: left;
-      }
-  /**
+.header__content :is(h1, .section__description) {
+  text-align: left;
+}
+
+.header__btns {
+  justify-content: flex-start;
+}
+
+.commitment__container {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.commitment__content :is(.section__header, .section__description) {
+  text-align: left;
+}
+
+.commitment__content .section__header {
+  max-width: 500px;
+}
+
+.build__content :is(.section__header, .section__description) {
+  text-align: left;
+}
+
+.client__container {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.client__content :is(.section__header, .section__description) {
+  text-align: left;
+}
+/**
    * SERVICE
    */
 
-  .service .grid-list {
+.service .grid-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  }
+}
 
-  /**
+/**
    * PRICING
    */
 
-  .pricing-tab-container {
-    padding: 40px;
-  }
+.pricing-tab-container {
+  padding: 40px;
+}
 
-  .pricing-card .wrapper {
-    margin-inline-end: auto;
-  }
+.pricing-card .wrapper {
+  margin-inline-end: auto;
+}
 
-  /**
+/**
    * GALLERY
    */
 
-  .gallery-card .card-content {
-    inset: 30px;
-  }
+.gallery-card .card-content {
+  inset: 30px;
+}
 
-  /**
+/**
    * APPOINTMENT
    */
 
-  .appoin-card .card-banner {
-    display: block;
-  }
+.appoin-card .card-banner {
+  display: block;
+}
 
-  .appoin-card {
-    display: flex;
-  }
+.appoin-card {
+  display: flex;
+}
 
-  /**
+/**
    * FOOTER
    */
 
-  .footer-list:is(:nth-child(3), :nth-child(4)) {
-    grid-column: auto;
-  }
+.footer-list:is(:nth-child(3), :nth-child(4)) {
+  grid-column: auto;
+}
 
 /**
  * responsive for large than 992px screen
@@ -1529,7 +1536,7 @@ a.contact-link:is(:hover, :focus) {
    * REUSED STYLE
    */
 
-   dialog iframe {
+  dialog iframe {
     width: 70vw;
     height: 70vh;
   }
@@ -1547,7 +1554,7 @@ a.contact-link:is(:hover, :focus) {
   }
   .btn--close {
     width: max-content;
-    margin-left:  auto;
+    margin-left: auto;
     margin-block: 0.5rem;
     margin-inline-end: 2rem;
   }

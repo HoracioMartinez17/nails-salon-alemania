@@ -108,47 +108,12 @@ const headerActive = function () {
 // Agregar evento de desplazamiento a la ventana para activar el encabezado y el botón de retroceso
 addEventOnElem(window, "scroll", headerActive);
 
-/**
- * Función de filtrado.
- */
-const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll("[data-filter]");
-
-let lastClickedFilterBtn = filterBtns[0];
-
-const filter = function () {
-  // Eliminar la clase 'active' del último botón de filtro clicado
-  lastClickedFilterBtn.classList.remove("active");
-  // Agregar la clase 'active' al botón de filtro actual
-  this.classList.add("active");
-  // Guardar el botón de filtro actual para la próxima vez
-  lastClickedFilterBtn = this;
-
-  // Iterar sobre los elementos a filtrar
-  for (let i = 0; i < filterItems.length; i++) {
-    if (
-      this.dataset.filterBtn === filterItems[i].dataset.filter ||
-      this.dataset.filterBtn === "all"
-    ) {
-      // Si el botón de filtro coincide o es 'all', mostrar el elemento
-      filterItems[i].style.display = "block";
-      filterItems[i].classList.add("active");
-    } else {
-      // De lo contrario, ocultar el elemento
-      filterItems[i].style.display = "none";
-      filterItems[i].classList.remove("active");
-    }
-  }
-};
-
-// Agregar evento de clic a los botones de filtro
-addEventOnElem(filterBtns, "click", filter);
 
 const dialog = document.getElementById("miDialog");
 const btnAbrirModal = document.querySelectorAll("[data-id='abrir-modal']");
 const btnCerrarModal = document.querySelector("[data-id='cerrar-modal']");
 let iframe = document.getElementById("iframe");
-let urlReservas = "https://kko.kisscalservice.de/?dbstudio=ks_linetattoo";
+let urlReservas = "https://www.fresha.com/de/book-now/nail-line-heilbronn-po4l584b/all-offer?pId=1270275";
 
 // Agrega un event listener a cada botón de abrir modal
 btnAbrirModal.forEach(btn => {
