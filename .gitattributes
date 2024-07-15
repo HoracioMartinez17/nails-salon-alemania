@@ -1,0 +1,5 @@
+# Normaliza todos los archivos de texto
+* text=auto
+
+# Asegura que los archivos JavaScript usen LF
+*.js text eol=lf
