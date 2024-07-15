@@ -1655,3 +1655,88 @@ a.contact-link:is(:hover, :focus) {
     padding: 15px;
   }
 }
+#cookieSvg {
+  width: 50px;
+}
+
+#cookieSvg g path {
+  fill: rgb(173, 157, 157);
+}
+
+.cookieHeading {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: rgb(146, 126, 126);
+}
+
+.cookieDescription {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.cookieDescription a {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246);
+}
+
+.cookieDescription a:hover {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.acceptButton {
+  width: 100px;
+  height: 30px;
+  background-color: var(--harvest-gold);
+  transition-duration: .2s;
+  border: none;
+  color: var(--black);
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all .6s ease;
+}
+
+.declineButton {
+  width: 80px;
+  height: 30px;
+  background-color: #dadada;
+  transition-duration: .2s;
+  color: rgb(46, 46, 46);
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all .6s ease;
+}
+
+.declineButton:hover {
+  background-color: #ff0000;
+  color:rgb(0, 0, 0);
+  transition-duration: .2s;
+}
+
+.acceptButton:hover {
+    background-color: #1eff00;
+  transition-duration: .2s;
+}
+    .cookie-card {
+      position: fixed;
+      bottom: 0; /* Posiciona el div desde la mitad de la parte inferior */
+      left: 0;
+      right: 0;/* Centra verticalmente */
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 20px; /* Aumenta el padding para mayor espacio alrededor del contenido */
+      z-index: 1000;
+    }

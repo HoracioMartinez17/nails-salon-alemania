@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <data class="card-price" value="${ofertaFormateada ? data.oferta : data.precio}">
                     ${ofertaFormateada ? 
-                        `<span style="text-decoration: line-through; color: red;">${precioFormateado}</span> ${ofertaFormateada}` : 
+                        `<span style="text-decoration: line-through; color: red;">${precioFormateado}</span> ${ofertaFormateada}` :
                         precioFormateado}
                 </data>
             </div>
